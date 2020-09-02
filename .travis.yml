@@ -16,8 +16,6 @@ after_success:
  - docker build -t seethentype/multi-worker ./worker
 
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-
-
  - docker push seethentype/multi-client
  - docker push seethentype/multi-nginx
  - docker push seethentype/multi-server
